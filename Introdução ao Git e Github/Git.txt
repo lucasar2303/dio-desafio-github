@@ -1,0 +1,93 @@
+Git é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.
+
+Link para download: https://git-scm.com/download/win
+
+Alguns dos comandos mais usados no git:
+
+
+git init
+
+Basicamente, ele cria um repositório vazio ou transforma uma pasta que você já tem e que não está com controle de versão em um repositório
+
+
+
+git clone <https://url-do-link>
+
+O Git clone é um comando para baixar o código-fonte existente de um repositório remoto (como o Github, por exemplo).
+
+
+
+git branch
+Com as branches (ou ramificações), vários desenvolvedores podem trabalhar paralelamente no mesmo projeto. Assim, cada um pode codar a sua parte sem que haja confusão! 
+
+Funciona basicamente da seguinte forma: a cada alteração realizada no código, seja para adicionar um novo recurso ou até mesmo corrigir um erro, cria-se um novo ponto de ramificação que consolida essas mudanças, sem interferir nos arquivos originais. 
+
+git branch <nome-da-branch>
+
+Este comando criará uma branch local. Para upar a nova branch para o repositório remoto, você precisa usar o seguinte comando:
+git push -u <remote> <nome-da-branch>
+
+Para ver as ramificações, por sua vez, use:
+git branch --list
+
+Por último, delete uma branch a partir do comando:
+git branch -d <nome-da-branch>
+
+
+
+Git checkout
+
+O principal objetivo do git checkout é ajudar você a mudar de uma branch para outra ou então verificar arquivos e commits:
+
+git checkout <nome-da-ramificação>
+
+
+
+Git status
+o comando Git status serve para fornecer algumas informações importantes sobre a branch em que você estiver no momento, incluindo se ela está atualizada em relação à master e quais arquivos foram alterados.
+
+git status
+
+
+
+
+Git diff
+
+Caso você queira, por exemplo, saber exatamente o que você alterou (e não apenas quais arquivos foram alterados), o melhor a se fazer é utilizar o comando:
+
+git diff
+Basicamente, sua execução realiza uma função de comparação nas fontes de dados Git e mostra quais linhas foram adicionadas e removidas.
+
+
+
+
+Git add
+Quando criamos, modificamos ou excluímos um arquivo, essas alterações ocorrerão em nosso ambiente local e não serão incluídas no próximo commit (a menos que alteremos as configurações).
+
+Para incluir as alterações de um arquivo em nosso próximo commit, será preciso usar o comando git add.
+
+Para adicionar apenas um arquivo:
+git add <arquivo>
+
+Para adicionar, de uma vez, todos os arquivos modificados:
+git add -A
+
+Vale lembrar que o comando git add não altera o repositório e as alterações não são salvas até usarmos o git commit.
+
+
+
+
+Git commit
+Relembrando, esse comando visa definir um ponto de verificação no processo de desenvolvimento, para o qual você pode voltar mais tarde, se necessário.
+
+git commit -m "mensagem explicando a mudança no código"
+
+
+
+
+Git push
+Após confirmar as alterações, a próxima coisa que você deseja fazer é enviar as alterações para o servidor remoto usando o comando git push:
+git push <remote> <nome-do-branch>
+
+No entanto, se seu branch for criado recentemente, você também precisará fazer upload do branch com o seguinte comando:
+git push -u origin <nome-do-branch>
